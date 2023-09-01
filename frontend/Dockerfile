@@ -8,7 +8,7 @@ WORKDIR /main
 COPY . /main
 
 # Installing the dependencies
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
+RUN npm install --no-cache-dir --upgrade -r requirements.txt
 
 # Command that will run
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "81"]
